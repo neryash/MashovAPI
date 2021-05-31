@@ -1,3 +1,23 @@
+//require stuff
+const request = require("request");
+const grades = require("./functions/grades.js")
+
+//variable declaration
+var XCsrfToken = "";
+var UID = "";
+var sessCookie = "";
+
+//Function to get session cookies
+function getSession() {
+  return sessCookie;
+}
+
+//Getting grades
+async function getGrades(){
+  return await grades.getGrades({userId:UID,csrf:XCsrfToken,cookies:sessCookie})
+}
+
+//login and get creds
 async function loginWithCreds(options){
   return new Promise(async (resolve, reject) => {
     request.post("https://web.mashov.info/api/login",
@@ -21,7 +41,7 @@ async function loginWithCreds(options){
             }
             sessCookie = `Csrf-Token=${XCsrfToken};MashovAuthToken=${mat};uniquId=${uniquId}`
             console.log(sessCookie);
-            resolve("done")
+            resolve({uid:UID,sessCookie:sessCookie,XCsrfToken:XCsrfToken})
           }else{
             console.log(response.statusCode);
             reject("failed " + response.statusCode)
@@ -31,4 +51,7 @@ async function loginWithCreds(options){
   })
 }
 
+//send to exports
 module.exports.loginWithCreds = loginWithCreds;
+module.exports.getSession = getSession;
+module.exports.getGrades = getGrades;
