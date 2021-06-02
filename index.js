@@ -6,6 +6,10 @@ const schools = require("./functions/schools.js")
 const behave = require("./functions/behave.js")
 const outBehave = require("./functions/outBehave.js")
 const birthday = require("./functions/birthday.js")
+const homework = require("./functions/homework.js")
+const cards = require("./functions/reportCards.js")
+const timetable = require("./functions/timetable.js")
+const mail = require("./functions/mail.js")
 
 //variable declaration
 var XCsrfToken = "";
@@ -44,6 +48,27 @@ async function getOutBehave() {
 async function getBirthday() {
   return await birthday.getBirthday(userOptions);
 }
+//Getting homework
+async function getHomework() {
+  return await homework.getHomework(userOptions);
+}
+//Getting Report Cards
+async function getCards() {
+  return await cards.getCards(userOptions);
+}
+//Getting Report Cards
+async function getCardLinks() {
+  return await cards.getCardLinks(userOptions);
+}
+//Getting Timetables
+async function getTimetable() {
+  return await timetable.getTimetable(userOptions);
+}
+//Getting Timetables
+async function getMail() {
+  return await mail.getMail(userOptions);
+}
+//https://web.mashov.info/api/students/5896c353-386f-44ce-9e4e-15f3c3d9c740/reportCards/edbbbb4b-bb8a-49d6-a326-18df52d25a41/%D7%9E%D7%97%D7%A6%D7%99%D7%AA%20%D7%90%20%D7%AA%D7%A9%D7%A4%22%D7%90.pdf
 
 //login and get creds
 async function loginWithCreds(options){
@@ -90,3 +115,8 @@ module.exports.getSchools = getSchools;
 module.exports.getBehave = getBehave;
 module.exports.getOutBehave = getOutBehave;
 module.exports.getBirthday = getBirthday;
+module.exports.getHomework = getHomework;
+module.exports.getCards = getCards;
+module.exports.getCardLinks = getCardLinks;
+module.exports.getTimetable = getTimetable;
+module.exports.getMail = getMail;
