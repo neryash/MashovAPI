@@ -1,11 +1,18 @@
 //require stuff
 const request = require("request");
 const grades = require("./functions/grades.js")
+const photo = require("./functions/photo.js")
+const schools = require("./functions/schools.js")
+const behave = require("./functions/behave.js")
+const outBehave = require("./functions/outBehave.js")
+const birthday = require("./functions/birthday.js")
 
 //variable declaration
 var XCsrfToken = "";
 var UID = "";
 var sessCookie = "";
+
+var userOptions = {userId:UID,csrf:XCsrfToken,cookies:sessCookie};
 
 //Function to get session cookies
 function getSession() {
@@ -14,7 +21,28 @@ function getSession() {
 
 //Getting grades
 async function getGrades(){
-  return await grades.getGrades({userId:UID,csrf:XCsrfToken,cookies:sessCookie})
+  return await grades.getGrades(userOptions)
+}
+
+//Getting Photo
+async function getPhoto() {
+  return await photo.getPhoto(UID);
+}
+//Getting Photo
+async function getSchools() {
+  return await schools.getSchools();
+}
+//Getting Behavior
+async function getBehave() {
+  return await behave.getBehave(userOptions);
+}
+//Getting Out Behavior
+async function getOutBehave() {
+  return await outBehave.getOutBehave(userOptions);
+}
+//Getting birthday
+async function getBirthday() {
+  return await birthday.getBirthday(userOptions);
 }
 
 //login and get creds
@@ -41,6 +69,7 @@ async function loginWithCreds(options){
             }
             sessCookie = `Csrf-Token=${XCsrfToken};MashovAuthToken=${mat};uniquId=${uniquId}`
             console.log(sessCookie);
+            userOptions = {userId:UID,csrf:XCsrfToken,cookies:sessCookie};
             resolve({uid:UID,sessCookie:sessCookie,XCsrfToken:XCsrfToken})
           }else{
             console.log(response.statusCode);
@@ -51,7 +80,13 @@ async function loginWithCreds(options){
   })
 }
 
+
 //send to exports
 module.exports.loginWithCreds = loginWithCreds;
 module.exports.getSession = getSession;
 module.exports.getGrades = getGrades;
+module.exports.getPhoto = getPhoto;
+module.exports.getSchools = getSchools;
+module.exports.getBehave = getBehave;
+module.exports.getOutBehave = getOutBehave;
+module.exports.getBirthday = getBirthday;
