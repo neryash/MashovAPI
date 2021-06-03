@@ -23,5 +23,5 @@ const MashovAPI = require("../index.js");
   //await MashovAPI.getTimetable()
   //await MashovAPI.getMail()
   //await MashovAPI.getRecipients()
-  // console.log(await MashovAPI.getPhoto());
+  console.log(await MashovAPI.getPhoto());
 })()

@@ -1,7 +1,7 @@
-# What is this?
+# Mashov API JS?
 
-A nodeJS wrapper for Mashov API
+This is a nodeJS wrapper for the [Mashov system](https://web.mashov.info/students/login)
 
-#Installation
+# Installation
 
 `npm i MashovAPI`
