@@ -7,7 +7,6 @@ This is a nodeJS wrapper for the
 <a href="https://web.mashov.info/students/login" target="_blank">Mashov System</a>
 
 ## Contents
-<hr>
 <ul>
   <li><a href="#installation">Installation</a></li>
 </ul>
