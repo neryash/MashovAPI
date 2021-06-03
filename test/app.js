@@ -1,7 +1,14 @@
 const MashovAPI = require("../index.js");
 
 (async function() {
-  console.log(await MashovAPI.loginWithCreds({username:"328089131",password:"vp8816881688"}));
+  var semel = "";
+  var allSchools = await MashovAPI.getSchools();
+  for(var i = 0; i < allSchools.length; i++){
+    if(allSchools[i].name == ""){
+      semel = allSchools[i].semel;
+    }
+  }
+  console.log(await MashovAPI.loginWithCreds({username:"",password:"",year:2021,school:semel}));
   // await MashovAPI.getGrades()
   // await MashovAPI.getPhoto()
   // await MashovAPI.getGrades()
@@ -14,5 +21,7 @@ const MashovAPI = require("../index.js");
   //await MashovAPI.getCards()
   //await MashovAPI.getCardLinks()
   //await MashovAPI.getTimetable()
-  console.log(await MashovAPI.getMail());
+  //await MashovAPI.getMail()
+  //await MashovAPI.getRecipients()
+  // console.log(await MashovAPI.getPhoto());
 })()

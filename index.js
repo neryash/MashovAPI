@@ -68,13 +68,21 @@ async function getTimetable() {
 async function getMail() {
   return await mail.getMail(userOptions);
 }
+//Getting Timetables
+async function getRecipients() {
+  return await mail.getRecipients(userOptions);
+}
+//Getting Timetables
+async function getMessageId() {
+  return await mail.getMessageId(userOptions);
+}
 //https://web.mashov.info/api/students/5896c353-386f-44ce-9e4e-15f3c3d9c740/reportCards/edbbbb4b-bb8a-49d6-a326-18df52d25a41/%D7%9E%D7%97%D7%A6%D7%99%D7%AA%20%D7%90%20%D7%AA%D7%A9%D7%A4%22%D7%90.pdf
 
 //login and get creds
 async function loginWithCreds(options){
   return new Promise(async (resolve, reject) => {
     request.post("https://web.mashov.info/api/login",
-      {json:{"semel":441196,"year":2021,"username":options.username,"password":options.password,"appName":"info.mashov.students","apiVersion":"3.20210425","appVersion":"3.20210425","appBuild":"3.20210425",
+      {json:{"semel":options.school,"year":options.year,"username":options.username,"password":options.password,"appName":"info.mashov.students","apiVersion":"3.20210425","appVersion":"3.20210425","appBuild":"3.20210425",
       "deviceUuid":"chrome","devicePlatform":"chrome","deviceManufacturer":"win","deviceModel":"desktop","deviceVersion":"91.0.4472.77"}},
         function(error,response,body) {
           if(!error && response.statusCode == 200){
@@ -120,3 +128,5 @@ module.exports.getCards = getCards;
 module.exports.getCardLinks = getCardLinks;
 module.exports.getTimetable = getTimetable;
 module.exports.getMail = getMail;
+module.exports.getRecipients = getRecipients;
+module.exports.getMessageId = getMessageId;
