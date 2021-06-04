@@ -11,7 +11,11 @@
     "url": "git+https://github.com/neryash/MashovAPI.git"
   },
   "keywords": [
-    "Mashov"
+    "Mashov",
+    "School",
+    "Israel",
+    "Api",
+    "Wrapper"
   ],
   "author": "Nerya Sheetrit",
   "license": "ISC",
