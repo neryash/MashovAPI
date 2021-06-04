@@ -42,8 +42,3 @@ for(var i = 0; i < allSchools.length; i++){
     semel = allSchools[i].semel;
   }
 }`
-<style>
-  .green{
-    color:#77C66E;
-  }
-</style>
