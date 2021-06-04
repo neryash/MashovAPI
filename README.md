@@ -26,6 +26,6 @@ It's that easy! NPM automatically installs required modules such as request.
 
 You can get npm <a href="https://nodejs.org/en/download/" target="_blank">here</a> if you don't have it installed.
 
-<div id="examples">
+<div id="examples" markdown="1">
 ## Examples:
 </div>
