@@ -13,9 +13,9 @@ This is a nodeJS wrapper for the
   <li><a href="#installation">Installation</a></li>
   <li><a href="#examples">Examples</a></li>
   <li><a href="#api">API</a></li>
-  <li><a href="#installation">Plans</a></li>
-  <li><a href="#installation">Progress</a></li>
-  <li><a href="#installation">FAQ</a></li>
+  <li><a href="#plans">Plans</a></li>
+  <li><a href="#progress">Progress</a></li>
+  <li><a href="#faq">FAQ</a></li>
 </ul>
 </span>
 
