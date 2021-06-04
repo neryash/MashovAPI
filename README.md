@@ -18,7 +18,9 @@ This is a nodeJS wrapper for the
 </ul>
 </span>
 
-<h3 id="installation">Installation:</h3>
+## Installation:
+<div id="installation">
+</div>
 
 `npm i MashovAPI`
 
@@ -26,6 +28,6 @@ It's that easy! NPM automatically installs required modules such as request.
 
 You can get npm <a href="https://nodejs.org/en/download/" target="_blank">here</a> if you don't have it installed.
 
-<div id="examples" markdown="1">
 ## Examples:
+<div id="examples">
 </div>
