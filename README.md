@@ -10,7 +10,7 @@ This is a nodeJS wrapper for the
 <span style="color:#77CA85">
 <ul>
   <li><a href="#installation">Installation</a></li>
-  <li><a href="#installation">Examples</a></li>
+  <li>[link](#Examples:)</li>
   <li><a href="#installation">API</a></li>
   <li><a href="#installation">Plans</a></li>
   <li><a href="#installation">Progress</a></li>
@@ -26,4 +26,4 @@ It's that easy! NPM automatically installs required modules such as request.
 
 You can get npm <a href="https://nodejs.org/en/download/" target="_blank">here</a> if you don't have it installed.
 
-<h3 id="examples">Examples:</h3>
+## Examples:
