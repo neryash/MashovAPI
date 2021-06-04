@@ -8,7 +8,7 @@ const MashovAPI = require("../index.js");
       semel = allSchools[i].semel;
     }
   }
-  console.log(await MashovAPI.loginWithCreds({username:"",password:"",year:2021,school:semel}));
+  console.log(await MashovAPI.loginWithCreds({username:"328089131",password:"vp8816881688",year:2021,school:441196}));
   // await MashovAPI.getGrades()
   // await MashovAPI.getPhoto()
   // await MashovAPI.getGrades()
@@ -23,5 +23,11 @@ const MashovAPI = require("../index.js");
   //await MashovAPI.getTimetable()
   //await MashovAPI.getMail()
   //await MashovAPI.getRecipients()
-  console.log(await MashovAPI.getPhoto());
+  let grades = await MashovAPI.getGrades();
+  let average = 0;
+  for(var i = 0; i < grades.length; i++){
+    average+=grades[i].grade;
+  }
+  average = average/grades.length;
+  console.log("Your average is: " + average);
 })()
