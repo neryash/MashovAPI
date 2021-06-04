@@ -31,3 +31,19 @@ You can get npm <a href="https://nodejs.org/en/download/" target="_blank">here</
 ## Examples:
 <div id="examples">
 </div>
+
+<h4 class="green">Get a school by iterating on the schools list</h4>
+`const MashovAPI = require("mashovapi-js")
+
+var semel = "";
+var allSchools = await MashovAPI.getSchools();
+for(var i = 0; i < allSchools.length; i++){
+  if(allSchools[i].name == "/*School Name*/"){
+    semel = allSchools[i].semel;
+  }
+}`
+<style>
+  .green{
+    color:#77C66E;
+  }
+</style>
