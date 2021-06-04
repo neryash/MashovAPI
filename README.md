@@ -33,6 +33,7 @@ You can get npm <a href="https://nodejs.org/en/download/" target="_blank">here</
 </div>
 
 <h4 class="green">Get a school by iterating on the schools list</h4>
+
 `
 const MashovAPI = require("mashovapi-js")
 
@@ -44,6 +45,7 @@ for(var i = 0; i < allSchools.length; i++){
   }
 }
 `
+
 <style>
   .green{
     color:#77C66E;
