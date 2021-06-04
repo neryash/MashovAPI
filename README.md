@@ -42,7 +42,8 @@ for(var i = 0; i < allSchools.length; i++){
   if(allSchools[i].name == "/*School Name*/"){
     semel = allSchools[i].semel;
   }
-}`
+}
+`
 <style>
   .green{
     color:#77C66E;
