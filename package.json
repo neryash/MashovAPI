@@ -1,6 +1,6 @@
 {
   "name": "mashovapi-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Mashov JS API wrapper",
   "main": "index.js",
   "scripts": {
