@@ -8,7 +8,7 @@ const outBehave = require("./functions/outBehave.js")
 const birthday = require("./functions/birthday.js")
 const homework = require("./functions/homework.js")
 const cards = require("./functions/reportCards.js")
-const timetable = require("./functions/timetable.js")
+const timetable = require("./functions/timeTable.js")
 const mail = require("./functions/mail.js")
 
 //variable declaration
